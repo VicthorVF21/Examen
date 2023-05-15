@@ -1,0 +1,14 @@
+.repo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .repo-container img {
+    margin-right: 10px;
+  }
+  
+  .repo-container h2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
