@@ -32,7 +32,8 @@ export default function Home() {
     }, []);
 
     return (
-    <div id='Div_PhoProfile'>
+      <div>
+      <div className='Div_PhoProfile'>
       <div><Image 
       src={avatar} 
       width={50} 
@@ -47,6 +48,12 @@ export default function Home() {
     ))}
   </div>
   </div>
+     <div className='ImageFont'>
+      <img src='/VMVFsinfondo.png' alt='Fondo'></img>
+       </div>
+    
+  </div>
+  
     );
 }
 
