@@ -3,7 +3,7 @@ import { data } from 'autoprefixer';
 import Image from 'next/image'
 import Link from "next/link"
 import { use, useEffect, useState } from 'react'
-
+import Carousel from './components/Carousel';
 
 type Repository = {
   id: number;
@@ -41,15 +41,22 @@ export default function Home() {
       alt="Picture of the author" />
       </div>
       <div>
+      {repos.length > 0 && (
+            <Carousel items={repos.map(repo => repo.id)} active={0} />
+          )}
     {repos.map((repo: Repository) => (
       <div key={repo.id}>     
-        <h2>{repo.name}</h2> 
+        <h2>
+        <a href={`https://github.com/VicthorVF21/${repo.name}`} target="_blank" rel="noopener noreferrer">
+          {repo.name}
+          </a>
+          </h2> 
       </div>
     ))}
   </div>
   </div>
-     <div className='ImageFont'>
-      <img src='/VMVFsinfondo.png' alt='Fondo'></img>
+     <div className='Div_Font'>
+      <img id ='PicFont' src='/VMVFsinfondo.png' alt='Fondo'></img>
        </div>
     
   </div>
