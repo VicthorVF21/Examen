@@ -5,6 +5,7 @@
 
 
 body {
+	
   background: linear-gradient(-45deg, #023859, #081B26, #23a6d5, #23d5abba);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
@@ -23,9 +24,10 @@ body {
 	}
 }
 .Div_Font{
-  position: fixed;
-  top: 50%;
+  position: relative;
+  top: -150px;
   left: 50%;
+  width: 50%;
 }
 #PicFont{
 	transition: all 0.5s ease;
@@ -41,5 +43,155 @@ body {
 	
 }
 
+#Div_Photo{
+	position: relative;
+	top: -54px;
+}
+
+
+.icon-button {
+	
+	border-radius: 2.6rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.3rem;
+	height: 2.6rem;
+	line-height: 2.6rem;
+	margin: 0 5px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	width: 2.6rem;
+}
+
+
+.icon-button span {
+	border-radius: 0;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 0;
+}
+.icon-button:hover span {
+	width: 2.6rem;
+	height: 2.6rem;
+	border-radius: 2.6rem;
+	margin: -1.3rem;
+}
+
+
+.icon-button i {
+	background: none;
+	color: white;
+	height: 2.6rem;
+	left: 0;
+	line-height: 2.6rem;
+	position: absolute;
+	top: 0;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 2.6rem;
+	z-index: 10;
+}
+
+
+
+
+
+.twitter span {
+	background-color: #4099ff;
+	background-image: url("https://res.cloudinary.com/dmsoej29n/image/upload/v1684619041/ImaExa/twitterlogo_hdjbur.png");
+	background-size: cover;
+}
+.facebook span {
+	background-color: #3B5998;
+	background-image: url("https://res.cloudinary.com/dmsoej29n/image/upload/v1684622158/ImaExa/LogoFacebook_bjt5iq.png");
+	background-size: cover;
+}
+.google-plus span {
+	background-color: #db5a3c;
+}
+.tumblr span {
+	background-color: #34526f;
+}
+
+.instagram span {
+	background-color: #a32e9d;
+	background-image: url("https://res.cloudinary.com/dmsoej29n/image/upload/v1684624002/ImaExa/LogoInsta_p7ccql.png");
+	background-size: cover;
+}
+
+.whatsapp span {
+	background-color: #43d854;
+	background-image: url("https://res.cloudinary.com/dmsoej29n/image/upload/v1684627844/ImaExa/LogoWhatsapp_otay51.png");
+	background-size: cover;
+}
+
+.twitter{
+	background-image: url("https://res.cloudinary.com/dmsoej29n/image/upload/v1684619041/ImaExa/twitterlogo_hdjbur.png");
+	background-size: cover;
+}
+
+.facebook{
+	background-image: url("https://res.cloudinary.com/dmsoej29n/image/upload/v1684622158/ImaExa/LogoFacebook_bjt5iq.png");
+	background-size: cover;
+}
+.instagram{
+	background-image: url("https://res.cloudinary.com/dmsoej29n/image/upload/v1684624002/ImaExa/LogoInsta_p7ccql.png");
+	background-size: cover;
+}
+.whatsapp{
+	background-image: url("https://res.cloudinary.com/dmsoej29n/image/upload/v1684627844/ImaExa/LogoWhatsapp_otay51.png");
+	background-size: cover;
+}
+  
+
+@media all and (max-width: 680px) {
+  .icon-button {
+    border-radius: 1.6rem;
+    font-size: 0.8rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    width: 1.6rem;
+  }
+
+  .icon-button:hover span {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 1.6rem;
+    margin: -0.8rem;
+  }
+
+ 
+  .icon-button i {
+	  height: 1.6rem;
+	  line-height: 1.6rem;
+	  width: 1.6rem;
+  }
+  body {
+
+	  padding: 10px;
+  }
+  .pinterest {
+   display: none; 
+  }
+
+}
+#Div_Social{
+	position: relative;
+	top: 40px;
+}
   
 

@@ -1,0 +1,45 @@
+  .wrapper {
+    position: relative;
+    padding: 100px;
+    width: 500px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    font-family:'Open Sans';
+    top: 100px;
+
+  }
+  
+  .roles {
+    font-size: 45px;
+    height: 70px;
+    vertical-align: middle;
+    overflow: hidden;
+    background: linear-gradient(#6e6e6eca ,rgb(231, 229, 235));
+    animation: text-gradient 5s ease-in-out infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    mix-blend-mode: difference; 
+    transition: color 0.1s ease; 
+  }
+  
+  @keyframes text-gradient {
+    0% {
+      background-position: 0% 50%;
+      transform: scale(1);
+    }
+    50% {
+      background-position: 100% 50%;
+      transform: scale(1.2);
+    }
+    100% {
+      background-position: 0% 50%;
+      transform: scale(1);
+    }
+  }
+  
+  .roles div {
+      height: 70px;
+      transition: margin-top 1s ease-in-out;
+      
+  }

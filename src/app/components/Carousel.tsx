@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { TransitionGroup } from 'react-transition-group';
 import './Carou.css';
+
 type CarouselProps = {
-  items: number[];
+  items: string[];
   active: number;
 };
 
@@ -12,8 +13,9 @@ type CarouselState = {
 };
 
 type ItemProps = {
-  id: number;
+  name: string;
   level: number;
+  githubLink: string;
 };
 
 export default class Carousel extends Component<CarouselProps, CarouselState> {
@@ -37,7 +39,14 @@ export default class Carousel extends Component<CarouselProps, CarouselState> {
         index = i % this.props.items.length;
       }
       level = this.state.active - i;
-      items.push(<Item key={index} id={this.props.items[index]} level={level} />);
+      items.push(
+        <Item
+          key={index}
+          name={this.props.items[index]}
+          level={level}
+          githubLink={`https://github.com/VicthorVF21/${this.props.items[index]}`}
+        />
+      );
     }
     return items;
   }
@@ -45,19 +54,22 @@ export default class Carousel extends Component<CarouselProps, CarouselState> {
   moveLeft() {
     let newActive = this.state.active;
     newActive--;
+    const direction = newActive < this.state.active ? 'right' : 'left'; 
     this.setState({
       active: newActive < 0 ? this.props.items.length - 1 : newActive,
-      direction: 'left',
+      direction: direction,
     });
-  }
+}
 
-  moveRight() {
+moveRight() {
     let newActive = this.state.active;
+    newActive++;
+    const direction = newActive > this.state.active ? 'left' : 'right'; 
     this.setState({
-      active: (newActive + 1) % this.props.items.length,
-      direction: 'right',
+      active: newActive % this.props.items.length,
+      direction: direction,
     });
-  }
+}
 
   render() {
     return (
@@ -79,6 +91,10 @@ export default class Carousel extends Component<CarouselProps, CarouselState> {
 class Item extends Component<ItemProps> {
   render() {
     const className = 'item level' + this.props.level;
-    return <div className={className}>{this.props.id}</div>;
+    return (
+      <a href={this.props.githubLink} target="_blank" rel="noopener noreferrer"className={className}>
+        {this.props.name}
+      </a>
+    );
   }
 }
