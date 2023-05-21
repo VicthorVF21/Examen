@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Carousel from './components/Carousel';
 import About from '../app/components/About';
-
+import '../app/components/styles.scss';
 type Repository = {
   id: number;
   name: string;
@@ -44,10 +44,70 @@ export default function Home() {
       <div id='Aboutdiv'>
         <About />
       </div>
+      <div className="container">
+
+	<div className="container__progressbars">
+
+		<div className="progressbar">
+			<svg className="progressbar__svg">
+				<circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-html shadow-html"> </circle>
+			</svg>
+			<span className="progressbar__text shadow-html">HTML</span>
+		</div>
+
+		<div className="progressbar">
+			<svg className="progressbar__svg">
+				<circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-css shadow-css"> </circle>
+			</svg>
+			<span className="progressbar__text shadow-css">CSS</span>
+		</div>
+
+		<div className="progressbar">
+			<svg className="progressbar__svg">
+				<circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-scss shadow-scss"> </circle>
+			</svg>
+			<span className="progressbar__text shadow-scss">SCSS</span>
+		</div>
+
+		<div className="progressbar">
+			<svg className="progressbar__svg">
+				<circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-js shadow-js"> </circle>
+			</svg>
+			<span className="progressbar__text shadow-js">JavaScript</span>
+		</div>
+
+		<div className="progressbar">
+			<svg className="progressbar__svg">
+				<circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-ts shadow-ts"> </circle>
+			</svg>
+			<span className="progressbar__text shadow-ts">TypeScript</span>
+		</div>
+
+		<div className="progressbar">
+			<svg className="progressbar__svg">
+				<circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-node shadow-node"> </circle>
+			</svg>
+			<span className="progressbar__text shadow-node">Node.js</span>
+		</div>
+
+		<div className="progressbar">
+			<svg className="progressbar__svg">
+				<circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-react shadow-react"> </circle>
+			</svg>
+			<span className="progressbar__text shadow-react">React.js</span>
+		</div>
+		<div className="progressbar">
+			<svg className="progressbar__svg">
+				<circle cx="80" cy="80" r="70" className="progressbar__svg-circle circle-angular shadow-angular"> </circle>
+			</svg>
+			<span className="progressbar__text shadow-angular">Java</span>
+		</div>
+	</div>
+</div>
       <div id='Div_Social'>
-      <a href="#" className="icon-button twitter"><i className="icon-twitter"></i><span></span></a>
-<a href="#" className="icon-button facebook"><i className="icon-facebook"></i><span></span></a>
-<a href="#" className="icon-button instagram"><i className="icon-instagram"></i><span></span></a>
+      <a href="https://twitter.com/VictorV57108264" className="icon-button twitter"><i className="icon-twitter"></i><span></span></a>
+<a href="https://www.facebook.com/vict97" className="icon-button facebook"><i className="icon-facebook"></i><span></span></a>
+<a href="https://www.instagram.com/victhor_v_f/" className="icon-button instagram"><i className="icon-instagram"></i><span></span></a>
 <a href="https://wa.me/50684230784?text=Hola+Victor%2C+quiero+contactar+contigo" className="icon-button whatsapp"><i className="icon-whatsapp"></i><span></span></a>
 </div>
     </div>

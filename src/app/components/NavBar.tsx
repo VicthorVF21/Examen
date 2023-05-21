@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import './Navbar.css';
 
 const scrollToSection = (event: React.MouseEvent<HTMLAnchorElement>) => {
   event.preventDefault();
@@ -10,7 +11,7 @@ const scrollToSection = (event: React.MouseEvent<HTMLAnchorElement>) => {
 
 export default function NavBar() {
     return (
-        <div>
+        <div id='Div_Nav'>
       <nav style={{backgroundColor: '#147396'}} className="w-full h-14 shadow">
         <div className="flex items-center justify-between px-4 py-2">
           <div>
